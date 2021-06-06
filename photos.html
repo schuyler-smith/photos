@@ -23,10 +23,10 @@ trips:
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- PAGE TITLE -->
-        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.config.title }}{% endif %}</title>
+        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.info.title }}{% endif %}</title>
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
         <!-- PAGE ICON -->
-        {% if site.data.config.page_icon %}<link rel="shortcut icon" href="{{ site.data.config.page_icon }}" />{% endif %}
+        {% if site.data.info.page_icon %}<link rel="shortcut icon" href="{{ site.data.info.page_icon }}" />{% endif %}
         <!-- LOAD OPEN SANS FONT -->
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin' rel='stylesheet' type='text/css'>
         <!-- LOAD FONTAWESOME ICONS -->
@@ -34,23 +34,23 @@ trips:
         <!-- LOAD ACADEMIC FONTAWESOME STYLE ICONS -->
         <link rel="stylesheet" href="/css/academicons/css/academicons.min.css"/>
         <!-- LOAD LOCAL CSS -->
-        <link rel="stylesheet" href="{{ site.baseurl }}{{ '/css/main.css' }}">
-        <link rel="stylesheet" href="{{ site.baseurl }}{{ '/css/mobile.css' }}">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/mobile.css">
         <link rel="stylesheet" href="https://schuyler-smith.github.io/css/media.css">
         <link rel="stylesheet" href="https://schuyler-smith.github.io/css/nav.css">
     </head>
     <body class="subpage">
         <!-- BACKGROUND IMAGE -->
-        <img src="{{ site.data.config.background }}" id="background">
+        <img src="{{ site.data.info.background }}" id="background">
         <!-- NAVIGATION BAR -->
         <div id="navmenu">
             <ul>
-                {% for link in site.data.config.pages %}
+                {% for tab in site.data.nav %}
                     {% assign class = nil %}
-                    {% if page.url == link.url %}
-                        <li><a class="active">{{ link.title }}</a></li>
+                    {% if page.url == tab.url %}
+                        <li><a class="active">{{ tab.title }}</a></li>
                     {% else %}
-                        <li><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+                        <li><a href="{{ site.baseurl }}{{ tab.url }}">{{ tab.title }}</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -63,7 +63,7 @@ trips:
         <div class="row"> 
             {% for trip in page.trips %}
             <div class="container">
-              <a href="/{{ trip }}">
+              <a href="/photos/{{ trip }}">
               <img src="/covers/{{ trip }}.jpg" alt="{{ trip }}" class="image" style="width:100%">
               <div class="middle">
                 <div class="photo_text">{{ trip }}</div>
