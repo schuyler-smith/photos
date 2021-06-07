@@ -105,5 +105,6 @@ h2 {
     padding-bottom: 10px;
     width: 65%;
     text-decoration: none;
+    text-transform: capitalize;
 }
 /**/
