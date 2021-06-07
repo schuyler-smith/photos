@@ -106,11 +106,7 @@ col4:
             <ul>
                 {% for tab in site.data.nav %}
                     {% assign class = nil %}
-                    {% if page.url == tab.url %}
-                        <li><a class="active">{{ tab.title }}</a></li>
-                    {% else %}
-                        <li><a href="{{ site.baseurl }}{{ tab.url }}">{{ tab.title }}</a></li>
-                    {% endif %}
+                        <li><a href="{{ tab.url }}">{{ tab.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
