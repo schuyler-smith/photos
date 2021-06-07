@@ -102,22 +102,22 @@ col4:
         <div class="row" style="margin-bottom: 10%"> 
                 <div class="column">
                     {% for pic in page.col1 %}
-                        <a href="/gallery/{{ page.place }}/{{ pic }}"><img src="/gallery/{{ page.place }}/resized_{{ pic }}" alt="{{ pic }}"/></a>
+                        <a href="{{ site.baseurl }}/gallery/{{ page.place }}/{{ pic }}"><img src="{{ site.baseurl }}/gallery/{{ page.place }}/resized_{{ pic }}" alt="{{ pic }}"/></a>
                     {% endfor %}
                 </div>
                 <div class="column">
                     {% for pic in page.col2 %}
-                        <a href="/gallery/{{ page.place }}/{{ pic }}"><img src="/gallery/{{ page.place }}//resized_{{ pic }}" alt="{{ pic }}"/></a>
+                        <a href="{{ site.baseurl }}/gallery/{{ page.place }}/{{ pic }}"><img src="{{ site.baseurl }}/gallery/{{ page.place }}//resized_{{ pic }}" alt="{{ pic }}"/></a>
                     {% endfor %}
                 </div>
                 <div class="column">
                     {% for pic in page.col3 %}
-                        <a href="/gallery/{{ page.place }}/{{ pic }}"><img src="/gallery/{{ page.place }}//resized_{{ pic }}" alt="{{ pic }}"/></a>
+                        <a href="{{ site.baseurl }}/gallery/{{ page.place }}/{{ pic }}"><img src="{{ site.baseurl }}/gallery/{{ page.place }}//resized_{{ pic }}" alt="{{ pic }}"/></a>
                     {% endfor %}
                 </div>
                 <div class="column">
                     {% for pic in page.col4 %}
-                        <a href="/gallery/{{ page.place }}/{{ pic }}"><img src="/gallery/{{ page.place }}/resized_{{ pic }}" alt="{{ pic }}"/></a>
+                        <a href="{{ site.baseurl }}/gallery/{{ page.place }}/{{ pic }}"><img src="{{ site.baseurl }}/gallery/{{ page.place }}/resized_{{ pic }}" alt="{{ pic }}"/></a>
                     {% endfor %}
                 </div>
         </div>
