@@ -1,5 +1,8 @@
 # photos
 
+Just a repo to create a webpage of [photos](https://schuyler-smith.github.io/photos/) from my various travels.
+
+
 <!-- 
 
 
